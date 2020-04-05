@@ -1,18 +1,43 @@
 import React from "react"
 import Layout from "../components/layout"
 import port1 from "../images/portfolio/gb-blog-template.png"
+import { graphql, useStaticQuery } from 'gatsby'
 
 const IndexPage = () => {
+
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    fullName
+                    longInformation
+                }
+            }
+            allMarkdownRemark {
+                edges {
+                    node {
+                        frontmatter {
+                            nameProject
+                            description
+                            languageCode
+                            linkProject
+                            websiteSource
+                        }
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <Layout>
             <div className="main">
                 <div className="intro" id="intro">
                     <div className="content-intro">
-                        <h1 className="title">I'M NGUYEN HUU NGHIA.</h1>
+                        <h1 className="title">I'M {data.site.siteMetadata.fullName}.</h1>
                         <p>
-                            Software Engineer, Web Developer, JavaScript Lover & Blogger
-                            @nguyenhuunghia
-            </p>
+                            {data.site.siteMetadata.longInformation}
+                        </p>
                         <div style={{ marginTop: "4rem" }}>
                             <button
                                 className="btn btn-primary"
@@ -32,142 +57,46 @@ const IndexPage = () => {
                         <p style={{ color: "#757575" }}>Check out my lastest work below.</p>
                     </div>
                     <div className="card-portfolio">
-                        <div className="cell">
-                            <a
-                                href="https://gb-template.netlify.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    src={port1}
-                                    width="99%"
-                                    height="auto"
-                                    alt="Gatsby Blog Template"
-                                />
-                            </a>
-                            <h2 style={{ textAlign: 'center', margin: '2rem 2rem' }}>
-                                <strong>
-                                    <a
-                                        href="https://gb-template.netlify.com/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Gatsby Blog Template
-                                    </a>
-                                </strong>
-                            </h2>
-                            <p style={{ color: '#757575', marginBottom: '2rem', textAlign: 'center' }}>A GatsbyJS Blog Template for blogging purpose.</p>
-                            <div className='cell-footer'>
-                                <div className="language-code">
-                                    <small>React, Create-react-app, Minimax Algorithm</small>
-                                </div>
-                                <div className='source-link'>
-                                    <a href="https://github.com/completejavascript/tic-tac-toe" target="_blank" rel="noopener noreferrer"><small>GitHub</small></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="cell">
-                            <a
-                                href="https://gb-template.netlify.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    src={port1}
-                                    width="99%"
-                                    height="auto"
-                                    alt="Gatsby Blog Template"
-                                />
-                            </a>
-                            <h2 style={{ textAlign: 'center', margin: '2rem 2rem' }}>
-                                <strong>
-                                    <a
-                                        href="https://gb-template.netlify.com/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Gatsby Blog Template
-                                    </a>
-                                </strong>
-                            </h2>
-                            <p style={{ color: '#757575', marginBottom: '2rem', textAlign: 'center' }}>A GatsbyJS Blog Template for blogging purpose.</p>
-                            <div className='cell-footer'>
-                                <div className="language-code">
-                                    <small>React, Create-react-app, Minimax Algorithm</small>
-                                </div>
-                                <div className='source-link'>
-                                    <a href="https://github.com/completejavascript/tic-tac-toe" target="_blank" rel="noopener noreferrer"><small>GitHub</small></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="cell">
-                            <a
-                                href="https://gb-template.netlify.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    src={port1}
-                                    width="99%"
-                                    height="auto"
-                                    alt="Gatsby Blog Template"
-                                />
-                            </a>
-                            <h2 style={{ textAlign: 'center', margin: '2rem 2rem' }}>
-                                <strong>
-                                    <a
-                                        href="https://gb-template.netlify.com/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Gatsby Blog Template
-                                    </a>
-                                </strong>
-                            </h2>
-                            <p style={{ color: '#757575', marginBottom: '2rem', textAlign: 'center' }}>A GatsbyJS Blog Template for blogging purpose.</p>
-                            <div className='cell-footer'>
-                                <div className="language-code">
-                                    <small>React, Create-react-app, Minimax Algorithm</small>
-                                </div>
-                                <div className='source-link'>
-                                    <a href="https://github.com/completejavascript/tic-tac-toe" target="_blank" rel="noopener noreferrer"><small>GitHub</small></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="cell">
-                            <a
-                                href="https://gb-template.netlify.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    src={port1}
-                                    width="99%"
-                                    height="auto"
-                                    alt="Gatsby Blog Template"
-                                />
-                            </a>
-                            <h2 style={{ textAlign: 'center', margin: '2rem 2rem' }}>
-                                <strong>
-                                    <a
-                                        href="https://gb-template.netlify.com/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Gatsby Blog Template
-                                    </a>
-                                </strong>
-                            </h2>
-                            <p style={{ color: '#757575', marginBottom: '2rem', textAlign: 'center' }}>A GatsbyJS Blog Template for blogging purpose.</p>
-                            <div className='cell-footer'>
-                                <div className="language-code">
-                                    <small>React, Create-react-app, Minimax Algorithm</small>
-                                </div>
-                                <div className='source-link'>
-                                    <a href="https://github.com/completejavascript/tic-tac-toe" target="_blank" rel="noopener noreferrer"><small>GitHub</small></a>
-                                </div>
-                            </div>
-                        </div>
+                        {
+                            data.allMarkdownRemark.edges.map((edge, index) => {
+                                return (
+                                    <div key={index} className="cell">
+                                        <a
+                                            href={edge.node.frontmatter.linkProject}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                src={port1}
+                                                width="99%"
+                                                height="auto"
+                                                alt={edge.node.frontmatter.nameProject}
+                                            />
+                                        </a>
+                                        <h2 style={{ textAlign: 'center', margin: '2rem 2rem' }}>
+                                            <strong>
+                                                <a
+                                                    href={edge.node.frontmatter.linkProject}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    {edge.node.frontmatter.nameProject}
+                                                </a>
+                                            </strong>
+                                        </h2>
+                                        <p style={{ color: '#757575', marginBottom: '2rem', textAlign: 'center' }}>{edge.node.frontmatter.description}</p>
+                                        <div className='cell-footer'>
+                                            <div className="language-code">
+                                                <small>{edge.node.frontmatter.languageCode}</small>
+                                            </div>
+                                            <div className='source-link'>
+                                                <a href={edge.node.frontmatter.linkSourceCode} target="_blank" rel="noopener noreferrer"><small>{edge.node.frontmatter.websiteSource}</small></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <button
@@ -224,7 +153,7 @@ const IndexPage = () => {
           nostrum labore.
         </div>
             </div>
-        </Layout>
+        </Layout >
     )
 }
 
