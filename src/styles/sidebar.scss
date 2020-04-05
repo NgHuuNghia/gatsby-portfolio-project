@@ -1,0 +1,64 @@
+$wSidebar: 250px;
+
+.sidebar {
+  height: 100%;
+  width: $wSidebar;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #222;
+  overflow-x: hidden;
+  text-align: center !important;
+  overflow: hidden;
+}
+
+.profile {
+  padding: 1.5rem !important;
+  margin: 2rem !important;
+}
+
+.padding-1 {
+  padding: 1rem !important;
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 0.1rem solid;
+  border-width: 0.2rem !important;
+  border-color: white !important;
+}
+
+.name {
+  text-transform: uppercase;
+  color: white;
+}
+
+.information {
+  color: #9e9e9e !important;
+  font-size: 80%;
+}
+
+.nav-sidebar {
+  margin-top: 2rem;
+}
+
+.block {
+  display: block;
+}
+
+.social-network {
+  display: flex;
+  margin-bottom: 0.5rem !important;
+  position: absolute !important;
+  font-size: larger;
+  bottom: 0;
+}
+
+.social-icon {
+  display: block;
+  margin-left: 1rem;
+  color: white;
+}

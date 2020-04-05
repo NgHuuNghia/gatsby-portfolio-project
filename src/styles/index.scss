@@ -1,0 +1,93 @@
+$wSidebar: 250px;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  margin-left: $wSidebar;
+  top: 0 !important;
+  right: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+footer {
+  margin-left: $wSidebar;
+}
+
+a {
+  color: #2196f3;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.content-intro {
+  margin-top: 3rem !important;
+  padding-top: 3rem !important;
+  padding-bottom: 7.5rem !important;
+}
+
+.intro {
+  background-color: #ffeb3b !important;
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  text-align: center !important;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1.5rem;
+  color: #222;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 0.1rem solid #bbb;
+  border-radius: 0.3rem;
+  outline: 0;
+  margin: 0 0 0.8rem;
+  text-transform: none;
+}
+
+.btn-primary {
+  color: #fff !important;
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff !important;
+  background-color: #0c82df !important;
+  border-color: #0c82df !important;
+}
+
+.btn-primary-inverse {
+  color: #2196f3 !important;
+  background-color: transparent !important;
+  border-color: #2196f3 !important;
+}
+
+.btn-primary-inverse:hover,
+.btn-primary-inverse:focus {
+  color: #fff !important;
+  background-color: #0c82df !important;
+  border-color: #0c82df !important;
+}
+
+.title {
+  font-size: 2.9rem !important;
+}
