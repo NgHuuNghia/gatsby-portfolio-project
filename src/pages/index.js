@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Footer from '../components/footer'
 import { graphql, useStaticQuery } from 'gatsby'
 import LazyImage from '../components/lazyImage'
-import { FaDownload } from 'react-icons/fa'
+import { FaDownload, FaArrowUp } from 'react-icons/fa'
 
 const IndexPage = () => {
     const [nImage, setNImage] = useState(6)
@@ -163,8 +163,13 @@ const IndexPage = () => {
                             <button style={{ width: '100%', marginTop: '1rem' }} className="btn btn-primary" type="submit" id="send"><strong>Send Message</strong></button>
                         </form>
                     </div>
-                    <Footer/>
+                    <Footer />
                 </div>
+            </div>
+            <div className='scrollToTop' onClick={() => { window.scroll(0, 0) }}>
+                <span>
+                    <FaArrowUp />
+                </span>
             </div>
         </Layout >
 
