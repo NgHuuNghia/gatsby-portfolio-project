@@ -4,6 +4,7 @@ import Footer from '../components/footer'
 import { graphql, useStaticQuery } from 'gatsby'
 import LazyImage from '../components/lazyImage'
 import { FaDownload, FaArrowUp } from 'react-icons/fa'
+import { Helmet } from 'react-helmet'
 
 const IndexPage = () => {
     const [nImage, setNImage] = useState(6)
@@ -37,6 +38,7 @@ const IndexPage = () => {
 
     return (
         <Layout>
+            <Helmet title="Nguyễn Hữu Nghĩa | Portfolio" defer={false} />
             <div className="main">
                 <div className="intro" id="intro">
                     <div className="content-intro">
