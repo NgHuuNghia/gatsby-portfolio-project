@@ -13,7 +13,12 @@ html {
 }
 
 footer {
-  margin-left: $wSidebar;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #222;
+  height: 38px;
+  padding: 0.5rem;
 }
 
 .content-intro {
@@ -30,6 +35,13 @@ footer {
   text-align: center !important;
 }
 
+.contact {
+  background-color: #ffeb3b !important;
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  text-align: center !important;
+}
 .btn {
   cursor: pointer;
   display: inline-flex;
@@ -94,6 +106,14 @@ footer {
   text-align: center !important;
 }
 
+.section-title-block-2 {
+  display: inline-block;
+  width: 100%;
+  margin-top: 4rem !important;
+  margin-bottom: 3rem !important;
+  text-align: center !important;
+}
+
 .section-title {
   text-transform: uppercase !important;
 }
@@ -129,7 +149,6 @@ footer {
 a {
   color: #2196f3;
   text-align: center;
-  padding: 5px;
   text-decoration: none;
 }
 

@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer>
-            <p>Copyright © 2020 by Nguyễn Hữu Nghĩa</p>
+            <span>Copyright © 2020 by Nguyễn Hữu Nghĩa</span>
         </footer>
     )
 }
