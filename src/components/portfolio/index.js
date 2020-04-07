@@ -1,33 +1,11 @@
 import React, { useState } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 import LazyImage from '../../components/lazyImage'
+import portfolios from '../../data/portfolios'
 import './index.scss'
 
-const Portfolio = () => {
+const Portfolio = ({ data }) => {
 
     const [nImage, setNImage] = useState(6)
-
-    const data = useStaticQuery(graphql`
-        query {
-            allMarkdownRemark {
-                edges {
-                    node {
-                        frontmatter {
-                            nameProject
-                            description
-                            languageCode
-                            linkProject
-                            websiteSource
-                            img
-                        }
-                        html
-                        excerpt
-                    }
-                }
-            }
-        }
-    `)
-
 
     return (
         <div id="portfolio" className="portfolio">
@@ -39,43 +17,43 @@ const Portfolio = () => {
             </div>
             <div className="card-portfolio">
                 {
-                    data.allMarkdownRemark.edges.slice(0, nImage).map((edge, index) => {
+                    portfolios.slice(0, nImage).map((portfolio, index) => {
                         return (
                             <div key={index} className="cell">
                                 <div >
                                     <a
-                                        href={edge.node.frontmatter.linkProject}
+                                        href={portfolio.linkProject}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         <LazyImage
-                                            placeHolder={edge.node.frontmatter.nameProject}
-                                            src={require(`../../images/portfolios/${edge.node.frontmatter.img}`)}
+                                            placeHolder={portfolio.nameProject}
+                                            src={require(`../../images/portfolios/${portfolio.img}`)}
                                             width={`100%`}
                                             height={`auto`}
                                             effect={"opacity"}
-                                            alt={edge.node.frontmatter.nameProject}
+                                            alt={portfolio.nameProject}
                                         />
                                     </a>
                                 </div>
                                 <h2 style={{ textAlign: 'center', margin: '2rem 2rem' }}>
                                     <strong>
                                         <a
-                                            href={edge.node.frontmatter.linkProject}
+                                            href={portfolio.linkProject}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            {edge.node.frontmatter.nameProject}
+                                            {portfolio.nameProject}
                                         </a>
                                     </strong>
                                 </h2>
-                                <p style={{ color: '#757575', marginBottom: '6rem', textAlign: 'center' }}>{edge.node.frontmatter.description}</p>
+                                <p style={{ color: '#757575', marginBottom: '6rem', textAlign: 'center' }}>{portfolio.description}</p>
                                 <div className='cell-footer'>
                                     <div className="language-code">
-                                        <small>{edge.node.frontmatter.languageCode}</small>
+                                        <small>{portfolio.languageCode}</small>
                                     </div>
                                     <div className='source-link'>
-                                        <a href={edge.node.frontmatter.linkSourceCode} target="_blank" rel="noopener noreferrer"><small>{edge.node.frontmatter.websiteSource}</small></a>
+                                        <a href={portfolio.linkSourceCode} target="_blank" rel="noopener noreferrer"><small>{portfolio.websiteSource}</small></a>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +63,7 @@ const Portfolio = () => {
             </div>
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                 {
-                    nImage < data.allMarkdownRemark.edges.length ? (
+                    nImage < portfolios.length ? (
                         <button
                             className="btn btn-primary"
                             onClick={() => { setNImage(nImage + 6) }}
