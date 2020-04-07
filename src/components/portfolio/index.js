@@ -42,7 +42,7 @@ const Portfolio = () => {
                     data.allMarkdownRemark.edges.slice(0, nImage).map((edge, index) => {
                         return (
                             <div key={index} className="cell">
-                                <div style={{ height: 345, width: 512 }}>
+                                <div >
                                     <a
                                         href={edge.node.frontmatter.linkProject}
                                         target="_blank"
@@ -52,7 +52,7 @@ const Portfolio = () => {
                                             placeHolder={edge.node.frontmatter.nameProject}
                                             src={require(`../../images/portfolios/${edge.node.frontmatter.img}`)}
                                             width={`100%`}
-                                            height={`100%`}
+                                            height={`auto`}
                                             effect={"opacity"}
                                             alt={edge.node.frontmatter.nameProject}
                                         />
@@ -69,7 +69,7 @@ const Portfolio = () => {
                                         </a>
                                     </strong>
                                 </h2>
-                                <p style={{ color: '#757575', marginBottom: '2rem', textAlign: 'center' }}>{edge.node.frontmatter.description}</p>
+                                <p style={{ color: '#757575', marginBottom: '6rem', textAlign: 'center' }}>{edge.node.frontmatter.description}</p>
                                 <div className='cell-footer'>
                                     <div className="language-code">
                                         <small>{edge.node.frontmatter.languageCode}</small>
