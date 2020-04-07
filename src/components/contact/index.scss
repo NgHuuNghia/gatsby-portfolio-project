@@ -21,3 +21,14 @@
   max-width: 100%;
   text-align: center !important;
 }
+
+.form-contact {
+  padding: 0 6rem 6rem 6rem;
+}
+
+// responsive mobile
+@media only screen and (max-width: 768px) {
+  .form-contact {
+    padding: 0 3rem 3rem 3rem;
+  }
+}

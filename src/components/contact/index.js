@@ -9,9 +9,9 @@ const Contact = () => {
                 <h1 className="section-title">
                     <strong>CONTACT</strong>
                 </h1>
-                <p style={{ color: "#757575" }}>If you would like to get in touch with me, please visit my social networks or send me a message. Thanks a lot!</p>
+                <p style={{ color: "#757575", padding: '1rem' }}>If you would like to get in touch with me, please visit my social networks or send me a message. Thanks a lot!</p>
             </div>
-            <div style={{ padding: '0 10rem 5rem 10rem' }}>
+            <div className='form-contact'>
                 <form method="POST" action="https://formspree.io/xzbaegyw">
                     <input style={{ width: '100%', height: '2.5rem', marginTop: '1rem' }} type="text" id="yname" name="Name" placeholder="Name" required />
                     <input style={{ width: '100%', height: '2.5rem', marginTop: '1rem' }} type="email" id="yemail" name="Email" placeholder="Email" required />

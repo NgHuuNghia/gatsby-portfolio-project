@@ -11,7 +11,7 @@ const About = () => {
                 </h1>
                 <p style={{ color: "#757575" }}>A little bit about me.</p>
             </div>
-            <div className='sumary' style={{ marginLeft: '3rem' }}>
+            <div className='sumary' style={{ marginLeft: '2rem' }}>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quisquam, repellendus laborum qui libero ut fugit iusto a dolores corporis nulla magnam! Veritatis, quos nisi! Provident libero voluptatibus numquam veniam?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quisquam, repellendus laborum qui libero ut fugit iusto a dolores corporis nulla magnam! Veritatis, quos nisi! Provident libero voluptatibus numquam veniam?
