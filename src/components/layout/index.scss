@@ -1,0 +1,13 @@
+.scrollToTop {
+  position: fixed;
+  display: block;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  color: white;
+  cursor: pointer !important;
+  background-color: hsla(0, 0%, 62%, 0.5) !important;
+  border-radius: 0.3rem !important;
+  padding: 1rem !important;
+  line-height: 1 !important;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/lazyImage.scss'
+import './index.scss'
 
 function elementInViewport(el) {
     const rect = el.getBoundingClientRect();

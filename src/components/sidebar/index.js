@@ -1,6 +1,6 @@
 import React from 'react'
-import avatar from '../images/avatar/tui2.jpg'
-import '../styles/sidebar.scss'
+import avatar from '../../images/avatar/tui2.jpg'
+import './index.scss'
 import { FaGithub, FaGitlab, FaLinkedin, FaFreeCodeCamp, FaCodepen, FaFacebookF } from 'react-icons/fa'
 import { graphql, useStaticQuery } from 'gatsby'
 
