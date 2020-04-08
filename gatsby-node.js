@@ -30,7 +30,6 @@ exports.createPages = ({ actions, graphql }) => {
             if (res.errors) {
                 return Promise.reject(res.errors)
             }
-            console.log(res.data.allMarkdownRemark.edges)
             res.data.allMarkdownRemark.edges.forEach(({ node }) => {
                 createPage({
                     path: node.frontmatter.path,
