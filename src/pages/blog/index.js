@@ -1,9 +1,11 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 const Blog = ({ data }) => {
     return (
         <div className='main-blog' style={{ textAlign: 'center' }}>
+            <Helmet title="Nguyễn Hữu Nghĩa | Blog's" defer={false} />
             <div className='header'>
                 <h1>NGUYEN HUU NGHIA BLOG'S</h1>
             </div>

@@ -5,7 +5,7 @@ module.exports = {
         fullName: 'NGUYEN HUU NGHIA',
         fullNameUTF8: 'nguyễn hữu nghĩa',
         sortInformation: 'Software Engineer & Web Developer',
-        longInformation: 'Software Engineer, Web Developer, JavaScript Lover & Blogger @nguyenhuunghia',
+        longInformation: 'Software Engineer, Web Developer, JavaScript Lover & Blogger ',
         menuNav: [
             { name: 'Intro', link: '#intro', id: 'intro' },
             { name: 'Portfolio', link: '#portfolio', id: 'portfolio' },

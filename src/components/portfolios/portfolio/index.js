@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import LazyImage from '../../components/lazyImage'
-import portfolios from '../../data/portfolios'
+import LazyImage from '../../lazyImage'
+import portfolios from '../../../data/portfolios'
 import './index.scss'
 
 const Portfolio = ({ data }) => {
@@ -28,7 +28,7 @@ const Portfolio = ({ data }) => {
                                     >
                                         <LazyImage
                                             placeHolder={portfolio.nameProject}
-                                            src={require(`../../images/portfolios/${portfolio.img}`)}
+                                            src={require(`../../../images/portfolios/${portfolio.img}`)}
                                             width={`100%`}
                                             height={`auto`}
                                             effect={"opacity"}

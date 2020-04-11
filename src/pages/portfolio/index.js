@@ -1,9 +1,9 @@
 import React from "react"
-import Layout from "../../components/layout"
-import Intro from '../../components/intro'
-import Portfolio from '../../components/portfolio'
-import About from '../../components/about'
-import Contact from '../../components/contact'
+import Layout from "../../components/portfolios/layout"
+import Intro from '../../components/portfolios/intro'
+import Portfolio from '../../components/portfolios/portfolio'
+import About from '../../components/portfolios/about'
+import Contact from '../../components/portfolios/contact'
 import { Helmet } from 'react-helmet'
 import './index.scss'
 

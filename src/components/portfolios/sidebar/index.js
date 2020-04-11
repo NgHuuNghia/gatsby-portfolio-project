@@ -1,5 +1,6 @@
 import React from 'react'
-import avatar from '../../images/avatar/tui2.jpg'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+import avatar from '../../../images/avatar/tui2.jpg'
 import './index.scss'
 import { FaGithub, FaGitlab, FaLinkedin, FaFreeCodeCamp, FaCodepen, FaFacebookF } from 'react-icons/fa'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -32,7 +33,7 @@ const Sidebar = () => {
                 {
                     data.site.siteMetadata.menuNav.map((item, index) => {
                         return (
-                            <a key={index} className='block' href={item.link}>{item.name}</a>
+                            <AnchorLink key={index} className='block' href={item.link}>{item.name}</AnchorLink>
                         )
                     })
                 }
