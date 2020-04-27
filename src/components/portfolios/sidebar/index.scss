@@ -9,7 +9,7 @@ $wSidebar: 250px;
   top: 0;
   background-color: #222;
   overflow-x: hidden;
-  text-align: center !important;
+  text-align: center;
   overflow: hidden;
 
   a:hover {
@@ -18,12 +18,12 @@ $wSidebar: 250px;
 }
 
 .profile {
-  padding: 1.5rem !important;
-  margin: 2rem !important;
+  padding: 1.5rem;
+  margin: 2rem;
 }
 
 .padding-1 {
-  padding: 1rem !important;
+  padding: 1rem;
 }
 
 .avatar {
@@ -31,8 +31,8 @@ $wSidebar: 250px;
   height: auto;
   border-radius: 50%;
   border: 0.1rem solid;
-  border-width: 0.2rem !important;
-  border-color: white !important;
+  border-width: 0.2rem;
+  border-color: white;
 }
 
 .name {
@@ -41,7 +41,7 @@ $wSidebar: 250px;
 }
 
 .information {
-  color: #9e9e9e !important;
+  color: #9e9e9e;
   font-size: 80%;
 }
 
@@ -56,8 +56,8 @@ $wSidebar: 250px;
 
 .social-network {
   display: flex;
-  margin-bottom: 0.5rem !important;
-  position: absolute !important;
+  margin-bottom: 0.5rem;
+  position: absolute;
   font-size: larger;
   bottom: 0;
 }
