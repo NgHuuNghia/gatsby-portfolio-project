@@ -133,7 +133,7 @@ const WeatherApp = () => {
               </div>
               <div className="icon-weather">
                 <img
-                  src={`http://openweathermap.org/img/wn/${dataWeather.current.weather[0].icon}@2x.png`}
+                  src={`https://openweathermap.org/img/wn/${dataWeather.current.weather[0].icon}@2x.png`}
                   alt={dataWeather.current.weather[0].description}
                 />
               </div>
