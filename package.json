@@ -16,6 +16,7 @@
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx"
   },
   "dependencies": {
+    "codemirror": "^5.53.2",
     "gatsby": "^2.20.12",
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-react-helmet": "^3.2.1",
@@ -26,6 +27,7 @@
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-codemirror2": "^7.1.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0"
