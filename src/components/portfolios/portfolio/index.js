@@ -28,7 +28,7 @@ const Portfolio = ({ data }) => {
                     placeHolder={portfolio.nameProject}
                     src={require(`../../../images/portfolios/${portfolio.img}`)}
                     width={`100%`}
-                    height={`auto`}
+                    height={`382px`}
                     effect={"opacity"}
                     alt={portfolio.nameProject}
                   />
