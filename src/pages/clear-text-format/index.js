@@ -39,18 +39,30 @@ const ClearTextFormat = () => {
         })
         setClearText(clearText)
         break
-        case "list-string-to-typedef":
-          var arrLineText = BodyText.replaceAll('\"','').split(',')
-          var clearText = ""
-          arrLineText.map((text, index) => {
-            if (index === arrLineText.length - 1) {
-              clearText += `${text}: String`
-            } else {
-              clearText += `${text}: String\n`
-            }
-          })
-          setClearText(clearText)
-          break
+      case "list-string-to-typedef":
+        var arrLineText = BodyText.replaceAll('\"', '').split(',')
+        var clearText = ""
+        arrLineText.map((text, index) => {
+          if (index === arrLineText.length - 1) {
+            clearText += `${text}: String`
+          } else {
+            clearText += `${text}: String\n`
+          }
+        })
+        setClearText(clearText)
+        break
+      case "list-string-to-schema":
+        var arrLineText = BodyText.replaceAll('\"', '').split(',')
+        var clearText = ""
+        arrLineText.map((text, index) => {
+          if (index === arrLineText.length - 1) {
+            clearText += `@Prop()\n${text}: String\n`
+          } else {
+            clearText += `@Prop()\n${text}: String\n\n`
+          }
+        })
+        setClearText(clearText)
+        break
       default:
         setClearText(null)
         break
@@ -72,6 +84,7 @@ const ClearTextFormat = () => {
               <option value="response-graphql">response-graphql</option>
               <option value="input-object">input-object</option>
               <option value="list-string-to-typedef">list-string-to-typedef</option>
+              <option value="list-string-to-schema">list-string-to-schema</option>
             </select>
           </div>
         </div>
